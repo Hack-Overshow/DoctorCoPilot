@@ -4,7 +4,7 @@ import { ThemeSupa } from '@supabase/auth-ui-shared'
 import { createClient } from '@supabase/supabase-js'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home, Onboard, NotFound, Authentication, Talk , Pre } from './pages';
+import { Home, Onboard, NotFound, Authentication, Talk , Pre, Test } from './pages';
 
 const supabase = createClient('https://vinsezijkogqvgujzlzv.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpbnNlemlqa29ncXZndWp6bHp2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA2MDIzMDEsImV4cCI6MjAyNjE3ODMwMX0.2DYKH_DbsOtTti_dK3kbIrVTK9Lz_IBl429uWSKHXMk')
 
@@ -36,10 +36,6 @@ function App() {
   }, [])
 
  
-  if (loading) {
-    return <Pre />;
-  }
-
   
   
   if (!session) {
@@ -51,6 +47,7 @@ function App() {
          <Route path="/onboarding" element={<Onboard />} />
         <Route path="/auth" element={<Authentication />} />
         <Route path="/p" element={<Pre />} />
+        <Route path="/test" element={<Test />} />
 
          <Route path="*" element={<NotFound />} />
       </Routes>
@@ -65,6 +62,7 @@ function App() {
         <Route path="/onboarding" element={<Onboard />} />
         <Route path="/auth" element={<Authentication />} />
         <Route path="/p" element={<Pre />} />
+        <Route path="/test" element={<Test />} />
 
          <Route path="*" element={<NotFound />} />
       </Routes>
