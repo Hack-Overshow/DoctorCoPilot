@@ -35,10 +35,12 @@ function App() {
     return () => subscription.unsubscribe()
   }, [])
 
+ 
   if (loading) {
     return <Pre />;
   }
 
+  
   
   if (!session) {
     return (<div><div className="App">
