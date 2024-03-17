@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home, Onboard, NotFound, Authentication, Talk } from './pages'; // Assuming your pages are in a folder named 'pages'
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">

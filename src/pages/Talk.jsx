@@ -1,6 +1,7 @@
 import React from "react";
 import { assets } from "../assets/assets/assets";
 import "./main.css";
+import logo from '../assets/logo.png'; // Import the image
 
 const Talk = () => {
     const [input, setInput] = React.useState("");
@@ -21,8 +22,8 @@ const Talk = () => {
     return (
         <div className="main">
             <div className="nav">
-                <p>Copilot</p>
-                <img src={assets.user} alt="" />
+                <p><img src={logo} alt="" /></p>
+                <img src="https://api.multiavatar.com/ajink-gupta.png?apikey=s9P2DAhUGyKbJO" alt="" />
             </div>
             <div className="main-container">
                 {!showResults ? (
@@ -43,17 +44,7 @@ const Talk = () => {
                                 <p>What are the recent updates ? </p>
                                 <img src={assets.compass_icon} alt="" />
                             </div>
-                            <div
-                                className="card"
-                                onClick={() =>
-                                    handleCardClick(
-                                        "Generic Medicines for aids"
-                                    )
-                                }
-                            >
-                                <p>Generic Medicines for aids </p>
-                                <img src={assets.message_icon} alt="" />
-                            </div>
+                            
                             <div
                                 className="card"
                                 onClick={() =>
@@ -109,7 +100,7 @@ const Talk = () => {
                         />
                         <div>
                             <img src={assets.gallery_icon} alt="" />
-                            <img src={assets.mic_icon} alt="" />
+                            
                             <img
                                 src={assets.send_icon}
                                 alt=""
