@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import slide from '../assets/slide.gif'; // Import the image
-import doct from '../assets/doct.gif'; // Import the image
 import chat from '../assets/chatbot.png'; // Import the image
 import bot from '../assets/bot.png'; // Import the image
 
 import { Link } from 'react-router-dom';
+import doct from '../assets/doct.gif'; // Import the image
+
 import "./main.css";
 
 // Slide components
